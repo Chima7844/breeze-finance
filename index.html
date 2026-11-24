@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Breeze Finance | Accounting, Tax &amp; Financial Consulting</title>
+<meta name="description" content="Breeze Finance provides end-to-end accounting, tax strategy and fractional CFO advisory for growing businesses. Founded by Francisca Nnamani.">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Mrs+Saint+Delafield&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#283891}a:hover{color:#1B2566}
+.bf{--blue:#283891;--blue-deep:#1B2566;--ink:#0E1116;--slate:#64748B;--mist:#F2F4FA;--line:#E3E7F0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#0E1116;background:#FFFFFF;-webkit-font-smoothing:antialiased}
+.bf *{box-sizing:border-box}
+.bf h1,.bf h2,.bf h3,.bf .mont{font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;text-wrap:balance}
+.wrap{max-width:1440px;margin:0 auto;padding-left:max(clamp(24px,11vw,200px),env(safe-area-inset-left,0px));padding-right:max(clamp(24px,11vw,200px),env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#283891}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn:focus-visible,.nav-link:focus-visible,.icon-btn:focus-visible,.day:focus-visible,.slot:focus-visible,.faq-q:focus-visible{outline:2px solid #283891;outline-offset:3px}
+.btn-primary{background:#283891;color:#FFFFFF;box-shadow:0 10px 24px -12px rgba(40,56,145,.7)}
+.btn-primary:hover{background:#1B2566;color:#FFFFFF;transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(40,56,145,.8)}
+.btn-ghost{background:transparent;color:#0E1116;border-color:#CBD2E1}
+.btn-ghost:hover{border-color:#283891;color:#283891;transform:translateY(-2px)}
+.btn-white{background:#FFFFFF;color:#0E1116}
+.btn-white:hover{background:#E8ECF8;color:#0E1116;transform:translateY(-2px)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.78);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid #E3E7F0}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.nav-links{display:flex;gap:30px}
+.nav-link{font-size:14px;font-weight:500;color:#0E1116;text-decoration:none;position:relative;padding:6px 0}
+.nav-link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:#283891;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-link:hover{color:#283891}.nav-link:hover::after{transform:scaleX(1)}
+.icon-btn{width:48px;height:48px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #CBD2E1;color:#0E1116;transition:all .2s ease;text-decoration:none}
+.icon-btn:hover{border-color:#283891;color:#FFFFFF;background:#283891}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center;padding-block:72px 96px}
+.portrait{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:28px;overflow:visible}
+.portrait-bg{position:absolute;inset:0;border-radius:28px;background:#283891;overflow:hidden}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:28px;mix-blend-mode:normal}
+.glass{background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.85);box-shadow:0 20px 40px -22px rgba(14,17,22,.45)}
+.badge{position:absolute;border-radius:18px;padding:14px 18px;display:flex;align-items:center;gap:12px;animation:float 6s ease-in-out infinite}
+.badge-b{animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.ribbon{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:20px;width:max-content;animation:scroll 32s linear infinite}
+.ribbon:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.logo-slot{display:flex;align-items:center;gap:12px;height:72px;padding:0 28px;border:1px dashed #CBD2E1;border-radius:14px;color:#94A0B4;filter:grayscale(1);transition:all .25s ease;white-space:nowrap}
+.logo-slot:hover{filter:none;color:#283891;border-color:#283891;background:#F2F4FA}
+.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.svc{position:relative;padding:32px 28px;border:1px solid #E3E7F0;border-radius:22px;background:#FFFFFF;display:flex;flex-direction:column;gap:18px;transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+.svc:hover{border-color:#283891;transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(40,56,145,.55)}
+.svc-ico{width:52px;height:52px;border-radius:14px;background:#F2F4FA;color:#283891;display:flex;align-items:center;justify-content:center;transition:all .25s ease}
+.svc:hover .svc-ico{background:#283891;color:#FFFFFF}
+.svc ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;border-top:1px solid #E3E7F0;padding-top:18px}
+.svc li{font-size:14px;color:#3B4556;display:flex;gap:10px;align-items:flex-start;line-height:1.45}
+.svc li::before{content:"";flex:0 0 6px;height:6px;margin-top:7px;border-radius:2px;background:#283891;transform:rotate(45deg)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.cred{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #E3E7F0;border-bottom:1px solid #E3E7F0}
+.cred>div{padding:22px 20px 22px 0}
+.cred>div+div{padding-left:20px;border-left:1px solid #E3E7F0}
+.t-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.t-card{padding:30px;border-radius:22px;background:#FFFFFF;border:1px solid #E3E7F0;display:flex;flex-direction:column;gap:22px;transition:transform .25s ease,box-shadow .25s ease}
+.t-card:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(14,17,22,.4)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid #E3E7F0;border-radius:22px;background:#FFFFFF;overflow:hidden}
+.stats>div{padding:28px 28px}
+.stats>div+div{border-left:1px solid #E3E7F0}
+.hero-x{position:relative;overflow:hidden;background:#0B0D12;color:#FFFFFF}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.84) 0%,rgba(0,0,0,.66) 55%,rgba(0,0,0,.45) 100%)}
+.btn-ghost-w{background:rgba(255,255,255,.06);color:#FFFFFF;border-color:rgba(255,255,255,.45)}
+.btn-ghost-w:hover{background:#FFFFFF;color:#0E1116;border-color:#FFFFFF;transform:translateY(-2px)}
+.ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ind{padding:26px 24px;border-radius:20px;background:#FFFFFF;border:1px solid #E3E7F0;display:flex;flex-direction:column;gap:12px;transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease}
+.ind:hover{border-color:#283891;transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(40,56,145,.55)}
+.ind svg{color:#283891}
+.ind h3{margin:0;font-size:18px;line-height:1.3;font-weight:700}
+.ind p{margin:0;font-size:14px;line-height:1.6;color:#64748B}
+@media (max-width:1080px){.ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.ind{padding:20px 16px}.ind h3{font-size:16px}}
+.vid-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.vid{position:relative;margin:0;border-radius:24px;overflow:hidden;background:#0E1116;aspect-ratio:16/10;max-width:100%}
+.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vid figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 24px 22px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.72));color:#FFFFFF}
+@media (max-width:860px){.vid-grid{grid-template-columns:minmax(0,1fr)}}
+.faq-item{border-bottom:1px solid #E3E7F0}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;background:none;border:0;text-align:left;cursor:pointer;font-family:Montserrat,"Helvetica Neue",Arial,sans-serif;font-weight:600;font-size:18px;color:#0E1116}
+.faq-q:hover{color:#283891}
+.faq-plus{flex:0 0 36px;height:36px;border-radius:999px;border:1px solid #CBD2E1;display:flex;align-items:center;justify-content:center;transition:all .2s ease}
+.faq-q:hover .faq-plus{border-color:#283891}
+.faq-ico{transition:transform .2s ease}.faq-ico.is-open{transform:rotate(45deg)}
+.book{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.cal{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:0;border-radius:26px;overflow:hidden;background:#FFFFFF;border:1px solid #E3E7F0;box-shadow:0 30px 60px -36px rgba(14,17,22,.35)}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{height:44px;border-radius:12px;border:0;background:transparent;font-family:inherit;font-size:14px;font-weight:500;color:#0E1116;cursor:pointer;font-variant-numeric:tabular-nums;transition:all .15s ease}
+.day:hover{background:#F2F4FA;color:#283891}
+.day.is-open{background:#F2F4FA;color:#283891;font-weight:600}
+.day.is-on,.day.is-on:hover{background:#283891;color:#FFFFFF}
+.day.is-off{color:#B8C0CF;cursor:not-allowed;background:transparent}
+.day.is-blank{visibility:hidden}
+.slot{min-height:44px;border-radius:12px;border:1px solid #CBD2E1;background:#FFFFFF;font-family:inherit;font-size:14px;font-weight:600;color:#283891;cursor:pointer;font-variant-numeric:tabular-nums;transition:all .15s ease}
+.slot:hover{border-color:#283891}
+.slot.is-on{background:#283891;color:#FFFFFF;border-color:#283891}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;align-items:start}
+.step-n{width:44px;height:44px;border-radius:999px;border:1px solid #283891;color:#283891;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:700;font-size:15px}
+.contact{position:relative;background:#0E1116;color:#FFFFFF;overflow:hidden}
+.contact-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.contact-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,17,22,.55),rgba(14,17,22,.92))}
+.c-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:1080px){.c-grid{grid-template-columns:minmax(0,1fr)}}
+.c-card{padding:36px;border-radius:24px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;flex-direction:column;gap:22px;transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.c-card:hover{background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.32);transform:translateY(-4px)}
+.f-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:48px}
+.f-link{color:#C9CFDB;text-decoration:none;font-size:14px}
+.f-link:hover{color:#FFFFFF}
+.sig{font-family:"Mrs Saint Delafield",cursive;font-size:64px;line-height:1;color:#283891}
+@media (max-width:1080px){
+.nav-links{display:none}
+.hero,.split,.book{grid-template-columns:minmax(0,1fr);gap:48px}
+.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.t-grid{grid-template-columns:minmax(0,1fr)}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stats>div:nth-child(3){border-left:0}
+.stats>div:nth-child(n+3){border-top:1px solid #E3E7F0}
+.f-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.f-grid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+.wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.nav-cta{display:none}
+.svc-grid,.c-grid,.cal{grid-template-columns:minmax(0,1fr)}
+.cred{grid-template-columns:minmax(0,1fr)}
+.cred>div+div{padding-left:0;border-left:0;border-top:1px solid #E3E7F0}
+.stats{grid-template-columns:minmax(0,1fr)}
+.stats>div+div{border-left:0;border-top:1px solid #E3E7F0}
+.badge{transform:scale(.88)}
+.h-xl{font-size:40px !important}
+.h-l{font-size:32px !important}
+.sec{padding-block:72px !important}
+}
+@media (prefers-reduced-motion:reduce){.track,.badge{animation:none}.bf *{transition:none !important}}
+</style>
+<style>
+html{scroll-behavior:smooth}
+summary.faq-q{list-style:none}summary.faq-q::-webkit-details-marker{display:none}
+details[open] .faq-ico{transform:rotate(45deg)}
+</style>
+</head>
+<body>
+<div class="bf">
+
+<!-- 1. NAV -->
+<header class="nav">
+<div class="wrap nav-row">
+<a href="#top" aria-label="Breeze Finance home" style="display: flex; align-items: center"><img src="assets/logo-black.png" alt="Breeze Finance" style="height: 40px; width: auto; display: block"></a>
+<nav class="nav-links" aria-label="Main">
+<a class="nav-link" href="#services">Services</a>
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#industries">Industries</a>
+<a class="nav-link" href="#faq">FAQ</a>
+<a class="nav-link" href="#contact">Contact</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<a class="icon-btn" href="https://wa.me/2348064647332?text=Hi%20Francisca%2C%20I%27d%20like%20to%20inquire%20about%20consulting%20services%20at%20Breeze%20Finance." aria-label="Chat on WhatsApp">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"></path><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1-1.4-2-1-1 .8a4.6 4.6 0 0 1-2.8-2.8l.8-1-1-2z"></path></svg>
+</a>
+<a class="btn btn-primary nav-cta" href="https://wa.me/2348064647332?text=Hi%20Francisca%2C%20I%27d%20like%20to%20book%20a%20consultation%20with%20Breeze%20Finance.">Book a Consultation</a>
+</div>
+</div>
+</header>
+
+<!-- 2. HERO -->
+<section id="top" class="hero-x">
+<img class="hero-bg" src="assets/hero.jpg" alt="">
+<div class="hero-shade"></div>
+<div class="wrap sec" style="position: relative; padding-block: 150px 160px">
+<div style="display: flex; flex-direction: column; gap: 28px; min-width: 0; max-width: 760px">
+<div style="display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 8px 16px 8px 10px; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(255,255,255,.08); backdrop-filter: blur(10px)">
+<span style="width: 8px; height: 8px; border-radius: 99px; background: #7F8EE0; box-shadow: 0 0 0 4px rgba(127,142,224,.25)"></span>
+<span style="font-size: 13px; font-weight: 500; color: #E4E8F5">Accounting · Tax · Fractional CFO</span>
+</div>
+<h1 class="h-xl" style="margin: 0; font-size: 64px; line-height: 1.04; font-weight: 800; letter-spacing: -0.025em; color: #FFFFFF">Transforming Financial Chaos into <span style="color: #A9B4EA">Strategic Growth.</span></h1>
+<p style="margin: 0; max-width: 34em; font-size: 18px; line-height: 1.65; color: #D3D8E4">Breeze Finance provides end-to-end accounting, tax strategy, and fractional CFO advisory tailored for scaling enterprises and modern businesses.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn btn-primary" href="https://wa.me/2348064647332?text=Hi%20Francisca%2C%20I%27d%20like%20to%20book%20a%20consultation%20with%20Breeze%20Finance.">Schedule a Strategy Call
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-ghost-w" href="#services">Explore Our Solutions</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 28px; padding-top: 8px">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #D3D8E4">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9B4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+Complimentary 30-minute diagnostic</div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #D3D8E4">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A9B4EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+100% confidential</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4. SERVICES -->
+<section id="services" class="sec" style="padding-block: 112px; background: #F2F4FA">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<span class="eyebrow">Core Solutions</span>
+<h2 class="h-l" style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Bespoke Financial Architecture for Your Business</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 16px; line-height: 1.6; color: #64748B">Four connected practices, one accountable team. Start with one, or let us run the whole finance function.</p>
+</div>
+<div class="svc-grid">
+<article class="svc">
+<div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M4 9h16M9 9v11"></path></svg></div>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.25; font-weight: 700">Corporate Accounting &amp; Bookkeeping</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #64748B">Precise ledgers, payroll management, and real-time P&amp;L reporting.</p>
+<ul><li>Monthly reconciliations &amp; close</li><li>Payroll &amp; PAYE processing</li><li>Real-time P&amp;L and balance sheet</li></ul>
+</article>
+<article class="svc">
+<div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5M10 13h6M10 17h6"></path></svg></div>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.25; font-weight: 700">Tax Advisory &amp; Compliance</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #64748B">Stress-free regulatory filing, corporate tax planning, and audit preparedness.</p>
+<ul><li>CIT, VAT &amp; withholding tax filings</li><li>Year-round tax planning</li><li>Audit-ready documentation</li></ul>
+</article>
+<article class="svc">
+<div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></div>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.25; font-weight: 700">Fractional CFO &amp; Financial Strategy</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #64748B">Cash flow forecasting, runway optimization, and investment readiness.</p>
+<ul><li>13-week cash flow forecasts</li><li>Budgets, KPIs &amp; board packs</li><li>Investor-ready financial models</li></ul>
+</article>
+<article class="svc">
+<div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"></path></svg></div>
+<h3 style="margin: 0; font-size: 20px; line-height: 1.25; font-weight: 700">Financial Systems &amp; Automation</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #64748B">Setting up scalable accounting software and automated reporting pipelines.</p>
+<ul><li>Software setup &amp; migration</li><li>Bank feeds &amp; invoicing automation</li><li>Live management dashboards</li></ul>
+</article>
+</div>
+</div>
+</section>
+
+<!-- HOW WE WORK (video) -->
+<section id="how" class="sec" style="padding-block: 112px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<span class="eyebrow">How We Work</span>
+<h2 class="h-l" style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Hands-on with your numbers, every step of the way.</h2>
+</div>
+<p style="margin: 0; max-width: 380px; font-size: 16px; line-height: 1.6; color: #64748B">We sit with you, go through the statements line by line, and leave you with records you understand and decisions you can make.</p>
+</div>
+<div class="vid-grid">
+<figure class="vid">
+<video class="bf-vid" src="assets/review.mp4" poster="assets/review.jpg" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="Consultant reviewing financial statements with a client"></video>
+<figcaption><div class="mont" style="font-weight: 700; font-size: 18px">Statement reviews with you</div><div style="font-size: 14px; color: #D3D8E4; margin-top: 4px">Bank statements, ledgers and filings, explained in plain terms.</div></figcaption>
+</figure>
+<figure class="vid">
+<video class="bf-vid" src="assets/calc.mp4" poster="assets/calc.jpg" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-label="Accountant calculating figures at a desk"></video>
+<figcaption><div class="mont" style="font-weight: 700; font-size: 18px">Every figure checked</div><div style="font-size: 14px; color: #D3D8E4; margin-top: 4px">Reconciliations and calculations you can rely on.</div></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- 5. ABOUT -->
+<section id="about" class="sec" style="padding-block: 112px">
+<div class="wrap split">
+<div style="position: relative; min-width: 0">
+<img src="assets/founder.jpg" alt="Francisca Nnamani, founder of Breeze Finance, seated in a navy and gold outfit" style="width: 100%; max-width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 15%; border-radius: 28px; display: block">
+<div class="glass" style="position: absolute; left: 20px; right: 20px; bottom: 20px; border-radius: 18px; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<div><div class="mont" style="font-weight: 700; font-size: 16px">Francisca Nnamani</div><div style="font-size: 13px; color: #64748B">Founder &amp; Principal Consultant</div></div>
+<img src="assets/logo-black.png" alt="" style="height: 28px; width: auto">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px; min-width: 0">
+<span class="eyebrow">About the Founder</span>
+<h2 class="h-l" style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Led by Experience. Driven by Precision.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3B4556">Francisca Nnamani founded Breeze Finance to give growing businesses the kind of finance function usually reserved for large corporates. Her background in enterprise finance and accounting shapes a practical, numbers-first approach: clean books first, then strategy built on figures you can trust.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3B4556">She works directly with founders and leadership teams, turning ledgers, tax obligations and cash forecasts into decisions they can act on this quarter.</p>
+<blockquote style="margin: 0; padding: 4px 0 4px 24px; border-left: 2px solid #283891; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 20px; line-height: 1.45; color: #0E1116">“Finance shouldn't feel complex. It should feel clear, actionable, and seamless.”</blockquote>
+<div style="display: flex; align-items: flex-end; gap: 18px">
+<div class="sig" aria-label="Signature of Francisca Nnamani">Francisca Nnamani</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 6. INDUSTRIES -->
+<section id="industries" class="sec" style="padding-block: 112px; background: #F2F4FA">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px">
+<span class="eyebrow">Our Experience &amp; Track Record</span>
+<h2 class="h-l" style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">We Bring Structure to Complex Business Financials.</h2>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px 64px; padding-bottom: 40px; border-bottom: 1px solid #DDE2EC">
+<div class="mont h-l" style="font-size: 72px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: #283891; font-variant-numeric: tabular-nums">₦10bn+<div style="font-size: 20px; letter-spacing: 0; font-weight: 700; margin-top: 10px">in Business Inflows</div></div>
+<p style="margin: 0; flex: 1 1 360px; min-width: 0; max-width: 560px; font-size: 17px; line-height: 1.7; color: #64748B">Our experience spans the organization and structuring of business financial records involving over ₦10 billion in inflows, alongside financial operations across diverse industries.</p>
+</div>
+<h3 class="mont" style="margin: 0; font-size: 22px; font-weight: 700">Industry Experience</h3>
+<div class="ind-grid">
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5h8v16M13 9h6v12M8 9h2M8 13h2M8 17h2"></path></svg><h3>Real Estate &amp; Construction</h3><p>Project accounts, development costing, contract profitability and cash flow.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg><h3>Energy, Power &amp; Renewables</h3><p>Project finance, asset registers, cost control and financial reporting.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V11"></path><path d="M12 11C12 6 8 3 4 3c0 5 3 8 8 8z"></path><path d="M12 14c0-4 3-7 8-7 0 4-3 7-8 7z"></path></svg><h3>Agriculture &amp; Agribusiness</h3><p>Inventory, production costing, seasonal cash flow and financing readiness.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20L9 6l4 7 2-3 7 10z"></path></svg><h3>Mining &amp; Natural Resources</h3><p>Accounting support, tax compliance and financial record organization.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7"></path><circle cx="6" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg><h3>Trading, Import &amp; Distribution</h3><p>Import costing, supplier balances, inventory controls and profitability.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8M4 3v5a2 2 0 0 0 4 0V3M6 11v10M17 21V3c-2 0-3 3-3 7h3"></path></svg><h3>Hospitality &amp; Consumer Services</h3><p>Revenue tracking, operating costs and performance reporting.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"></path></svg><h3>Professional Services</h3><p>Financial systems, management reporting and tax planning.</p></article>
+<article class="ind"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V4h6v17z"></path><path d="M8 18h1M12 18h1M16 18h1"></path></svg><h3>Manufacturing &amp; Industrial Businesses</h3><p>Cost accounting, inventory valuation and margin analysis.</p></article>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec" style="padding-block: 112px">
+<div class="wrap split" style="align-items: start">
+<div style="display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<span class="eyebrow">FAQ</span>
+<h2 class="h-l" style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Questions founders ask before the first call</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #64748B; max-width: 30em">Still unsure? Send Francisca a message on WhatsApp and get a direct answer.</p>
+</div>
+<div style="min-width: 0; border-top: 1px solid #E3E7F0">
+<details class="faq-item" open>
+<summary class="faq-q"><span>Who do you typically work with?</span><span class="faq-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#283891" stroke-width="2.4" stroke-linecap="round" class="faq-ico"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 56px 26px 0; font-size: 15px; line-height: 1.7; color: #64748B">Founders, SMEs and corporate teams who have outgrown spreadsheets or a part-time bookkeeper and need reliable numbers, timely tax filings and a finance partner for growth decisions.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q"><span>How do I book a consultation?</span><span class="faq-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#283891" stroke-width="2.4" stroke-linecap="round" class="faq-ico"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 56px 26px 0; font-size: 15px; line-height: 1.7; color: #64748B">Send Francisca a message on WhatsApp at 0806 464 7332, or email breezefinancemain@gmail.com. We will agree a time and review your books, tax position and cash flow together, with no obligation to engage us afterwards.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q"><span>Can you clean up books that are months behind?</span><span class="faq-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#283891" stroke-width="2.4" stroke-linecap="round" class="faq-ico"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 56px 26px 0; font-size: 15px; line-height: 1.7; color: #64748B">Yes. Catch-up bookkeeping is one of the most common starting points. We reconcile past periods, correct errors and bring your records up to date before moving you onto a monthly routine.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q"><span>How is pricing structured?</span><span class="faq-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#283891" stroke-width="2.4" stroke-linecap="round" class="faq-ico"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 56px 26px 0; font-size: 15px; line-height: 1.7; color: #64748B">Most clients are on a fixed monthly retainer based on transaction volume and scope. Project work such as system setup or investment readiness is quoted upfront.</p>
+</details>
+<details class="faq-item">
+<summary class="faq-q"><span>Is my financial information kept confidential?</span><span class="faq-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#283891" stroke-width="2.4" stroke-linecap="round" class="faq-ico"><path d="M12 5v14M5 12h14"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 56px 26px 0; font-size: 15px; line-height: 1.7; color: #64748B">Always. Engagements are covered by a confidentiality agreement, and documents are shared through secure, access-controlled channels.</p>
+</details>
+</div>
+</div>
+</section>
+
+<!-- 8. CONTACT -->
+<section id="contact" class="contact">
+<img class="contact-bg" src="assets/desk.jpg" alt="">
+<div class="contact-shade"></div>
+<div class="wrap sec" style="position: relative; padding-block: 112px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<span class="eyebrow" style="color: #A9B4EA">Direct Contact</span>
+<h2 class="h-l" style="margin: 0; font-size: 44px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; color: #FFFFFF">Prefer a Direct Conversation?</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #C9CFDB">Reach out immediately via our priority communication channels.</p>
+</div>
+<div class="c-grid">
+<div class="c-card">
+<div style="width: 60px; height: 60px; border-radius: 18px; background: #25D366; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"></path><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1-1.4-2-1-1 .8a4.6 4.6 0 0 1-2.8-2.8l.8-1-1-2z"></path></svg></div>
+<div><div class="mont" style="font-weight: 700; font-size: 22px; color: #FFFFFF">Chat with Francisca directly on WhatsApp</div><div style="font-size: 15px; line-height: 1.6; color: #C9CFDB; margin-top: 8px">The fastest way to book a consultation. 0806 464 7332</div></div>
+<a class="btn btn-white" href="https://wa.me/2348064647332?text=Hi%20Francisca%2C%20I%27d%20like%20to%20inquire%20about%20consulting%20services%20at%20Breeze%20Finance." style="align-self: flex-start">Start WhatsApp Chat
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+</div>
+<div class="c-card">
+<div style="width: 60px; height: 60px; border-radius: 18px; background: linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF); color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></div>
+<div><div class="mont" style="font-weight: 700; font-size: 22px; color: #FFFFFF">Follow &amp; DM on Instagram</div><div style="font-size: 15px; line-height: 1.6; color: #C9CFDB; margin-top: 8px">Financial tips, market breakdowns, and firm updates.</div></div>
+<a class="btn btn-white" href="https://www.instagram.com/breeze_finance/" style="align-self: flex-start">Visit @breeze_finance
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+</div>
+<div class="c-card">
+<div style="width: 60px; height: 60px; border-radius: 18px; background: #283891; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3.5 7l8.5 6 8.5-6"></path></svg></div>
+<div><div class="mont" style="font-weight: 700; font-size: 22px; color: #FFFFFF">Send us an email</div><div style="font-size: 15px; line-height: 1.6; color: #C9CFDB; margin-top: 8px; overflow-wrap: anywhere">breezefinancemain@gmail.com</div></div>
+<a class="btn btn-white" href="mailto:breezefinancemain@gmail.com?subject=Consultation%20enquiry" style="align-self: flex-start">Email Breeze Finance
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 9. FOOTER -->
+<footer style="background: #0B0D12; color: #FFFFFF; border-top: 1px solid rgba(255,255,255,.08)">
+<div class="wrap" style="padding-block: 64px 0">
+<div class="f-grid" style="padding-bottom: 48px">
+<div style="display: flex; flex-direction: column; gap: 18px; max-width: 360px">
+<img src="assets/logo-white.png" alt="Breeze Finance" style="height: 44px; width: auto; align-self: flex-start">
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #9AA3B5">We turn financial complexity into clear, confident decisions for growing businesses.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #6E7891">Navigate</span>
+<a class="f-link" href="#services">Services</a><a class="f-link" href="#about">About</a><a class="f-link" href="#industries">Industries</a><a class="f-link" href="#faq">FAQ</a><a class="f-link" href="#contact">Contact</a><span class="f-link" style="overflow-wrap: anywhere">breezefinancemain@gmail.com</span><span class="f-link">0806 464 7332</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #6E7891">Legal</span>
+<a class="f-link" href="#top">Privacy Policy</a><a class="f-link" href="#top">Terms of Service</a><a class="f-link" href="#top">Cookie Policy</a>
+</div>
+</div>
+<div style="padding-block: 24px; border-top: 1px solid rgba(255,255,255,.1); font-size: 13px; color: #8790A3">© 2026 Breeze Finance. All Rights Reserved. Led by Francisca Nnamani.</div>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
